@@ -1,0 +1,25 @@
+version: 2
+
+sources:
+  - name: retail
+    description: "Retail sales data"
+    tables:
+      - name: sales
+        description: "Online retail sales transactions"
+        columns:
+          - name: 'Customer ID'
+            description: "Unique ID for each customer"
+          - name: Invoice
+            description: "Invoice number"
+          - name: InvoiceDate
+            description: "Date of the invoice"
+          - name: StockCode
+            description: "stock code of the product"
+          - name: Quantity
+            description: "Quantity of items sold"
+          - name: Price
+            description: "Price per item"
+          - name: Country
+            description: "Country of customer"
+          - name: TotalPrice
+            description: "Total price per transaction (Quantity * Price)"

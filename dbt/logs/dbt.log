@@ -1,0 +1,62 @@
+[0m22:25:15.283556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54c0ddcc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54bff5c9d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54bff5ca30>]}
+
+
+============================== 22:25:15.290745 | 79e173e3-69fe-4b56-bddf-a05965fee8d8 ==============================
+[0m22:25:15.290745 [info ] [MainThread]: Running with dbt=1.9.4
+[0m22:25:15.291827 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/home/wang/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt init .', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m22:25:15.646410 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object.. Dictionary: {'dir': PosixPath('/home/wang/.dbt')}
+[0m22:25:15.647354 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m22:28:28.935454 [debug] [MainThread]: Starter project path: /home/wang/airflow_env/lib/python3.9/site-packages/dbt/include/starter_project
+[0m22:28:29.024241 [info ] [MainThread]: 
+Your new dbt project "retail" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:28:29.025178 [info ] [MainThread]: Setting up your profile.
+[0m22:32:03.244372 [info ] [MainThread]: Profile retail written to /home/wang/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m22:32:03.247394 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 408.10718, "process_in_blocks": "5872", "process_kernel_time": 1.221416, "process_mem_max_rss": "214848", "process_out_blocks": "88", "process_user_time": 3.856386}
+[0m22:32:03.248826 [debug] [MainThread]: Command `dbt init` succeeded at 22:32:03.248453 after 408.11 seconds
+[0m22:32:03.249867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54c0ddcc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54bff99670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54bffd5e20>]}
+[0m22:32:03.251384 [debug] [MainThread]: Flushing usage events
+[0m22:32:04.085101 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:19:05.893007 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ba03a6c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1b9f52d670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1b9f52d610>]}
+
+
+============================== 18:19:05.931814 | ed889402-282a-4259-b015-c0a03d777ba2 ==============================
+[0m18:19:05.931814 [info ] [MainThread]: Running with dbt=1.9.4
+[0m18:19:05.933372 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/home/wang/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:19:11.330709 [debug] [MainThread]: Starter project path: /home/wang/airflow_env/lib/python3.9/site-packages/dbt/include/starter_project
+[0m18:19:11.408957 [info ] [MainThread]: 
+Your new dbt project "online_retail" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:19:11.410442 [info ] [MainThread]: Setting up your profile.
+[0m18:22:58.795913 [info ] [MainThread]: Profile online_retail written to /home/wang/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:22:58.798475 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 232.98694, "process_in_blocks": "120", "process_kernel_time": 1.096237, "process_mem_max_rss": "213520", "process_out_blocks": "88", "process_user_time": 3.418268}
+[0m18:22:58.802590 [debug] [MainThread]: Command `dbt init` succeeded at 18:22:58.802065 after 232.99 seconds
+[0m18:22:58.804142 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1ba03a6c10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1b9f7055b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1b9f52d5b0>]}
+[0m18:22:58.808489 [debug] [MainThread]: Flushing usage events
+[0m18:22:59.522042 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_sales
+    description: "Staging model for cleaned online retail sales data"
+    columns:
+      - name: Invoice
+        description: "Invoice number"
+        tests:
+          - not_null
+
+      - name: InvoiceDate
+        description: "Date of the invoice"
+        tests:
+          - not_null
+
+      - name: 'customer_id'
+        description: "Unique ID for each customer"
+        tests:
+          - not_null
+
+      - name: StockCode
+        description: "stockcode of the product"
+        tests:
+          - not_null
+      - name: Price
+        description: "price of the product"
+      
+      - name: Quantity
+        description : "quantity of the products"
+        
+      - name: Country
+
+      - name: TotalPrice
+        description: "Total price per transaction (Quantity * Price)"
+  
+  - name: rfm
+    description: "RFM segmentation table based on customer behavior"
+    columns:
+      - name: customer_id
+        description: "Unique identifier for a customer"
+        tests:
+          - not_null
+      - name: recency
+        description: "Days since last purchase"
+      - name: frequency
+        description: "Total number of purchases"
+      - name: monetary
+        description: "Total amount spent"
+
+  - name: product_performance
+    description: "Aggregates total quantity sold and total revenue by StockCode"
+    columns:
+      - name: StockCode
+        description: "The unique identifier for each product"
+        tests:
+          - not_null
+          - unique
+      - name: total_quantity_sold
+        description: "Total quantity of each product sold"
+      - name: total_revenue
+        description: "Total revenue from sales of each product"
