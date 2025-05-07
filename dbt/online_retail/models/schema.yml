@@ -28,7 +28,7 @@ models:
       
       - name: Quantity
         description : "quantity of the products"
-        
+
       - name: Country
 
       - name: TotalPrice
@@ -60,3 +60,10 @@ models:
         description: "Total quantity of each product sold"
       - name: total_revenue
         description: "Total revenue from sales of each product"
+  - name : country
+    description: "customers by their geographical location"
+
+  - name: CLV
+    description: "Customer Lifetime Value"
+
+
