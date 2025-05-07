@@ -296,11 +296,3 @@ def generate_all_recommendations_method1(top_n=5):
     print(f"Generated {len(recommendations_df)} recommendations for {len(all_recommendations)} users")
     
     return recommendations_df
-
-    
-# Generate recommendations using method 1 (faster for most cases)
-#df_recommendations = generate_all_recommendations_method1(top_n=5)
-
-# Optional: Save recommendations to CSV
-#df_recommendations.to_csv('user_item_recommendations.csv', index=False)
-#print("Recommendations saved to user_item_recommendations.csv")
