@@ -157,25 +157,30 @@ BigQuery serves as the source of truth for analytics, reporting, and recommendat
 
 
   ## 📊 Dashboards
-
+  You can view the full dashboard [here](https://lookerstudio.google.com/reporting/a4b0a90f-7c12-488d-b75c-59f2847b2177).
 - **Sales & Revenue Overview**
   - KPI cards (total revenue, total order, average order value, repeat purchase rate)
   - Time‑series line chart of monthly revenue trends  
   - Pie chart of sales volume by Stock code
-  - Geo map showing revenue by country  
+  - Geo map showing revenue by country
+  ![Image](https://github.com/user-attachments/assets/d4d457d9-5565-47ef-b70a-9efa21593fe1)
+
 
 - **RFM Segmentation**
   - Bar chart of user counts per RFM segment  
   - Heatmap of Recency, Frequency, Monetary score distributions  
   - Revenue by RFM segment  
+![Image](https://github.com/user-attachments/assets/989398e2-52e8-4700-9bf5-ae22248a802f)
 
-- **Top 10 Customer Insights**  
+- **Customer Insights**  
   - Table of the top 10 customers(country, RFM segment, frequency, lifetime revenue)
   - Total revenue by country
   - Comparision between average order value and frequency
+![Image](https://github.com/user-attachments/assets/e053e1f2-30f2-47f4-8ac7-f54d827f83b5)
 
 - **Recommendations**  
   - Personalized product lists from hybrid filtering per user
+![Image](https://github.com/user-attachments/assets/c743484d-bf35-4fcb-828c-1e3186462783)
 
 ---
 
