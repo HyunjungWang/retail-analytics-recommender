@@ -117,7 +117,7 @@ f1s=[]
 print(f"Running {K}-Fold Cross Validation...")
 
 # Hyperparameters for the model
-num_components = 64  # Higher dimensionality for latent factors
+num_components = 128  # Higher dimensionality for latent factors
 learning_rate = 0.05
 epochs = 30
 regularization = 0.001
@@ -155,7 +155,7 @@ for fold, (train_index, test_index) in enumerate(kf.split(interaction_df), 1):
         train_matrix, 
         user_features=user_features,
         item_features=item_features,
-        epochs=10, 
+        epochs=30, 
         num_threads=2,
         verbose=True
     )

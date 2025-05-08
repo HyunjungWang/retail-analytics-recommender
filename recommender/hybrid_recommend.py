@@ -132,16 +132,31 @@ def generate_all_recommendations(top_n=5):
 df_recommendations = generate_all_recommendations(top_n=5)
 
 # Optional: Save recommendations to CSV
-df_recommendations.to_csv('hybrid_recommendations.csv', index=False)
+df_recommendations.to_csv('hybrid_recommendations2.csv', index=False)
 print("Recommendations saved to user_item_recommendations.csv")
 
-# Define table ID: project_id.dataset_id.table_name
-table_id = "retail-etl-456514.retail.sales.hybrid_recommendations"
-
-# Upload DataFrame to BigQuery
-job = client.load_table_from_dataframe(df_recommendations, table_id)
-
 # Wait for the job to complete
-job.result()
+client = bigquery.Client(project="retail-etl-456514")
+dataset_id = 'retail'
+table_id = 'hybrid_recommendations'
 
-print(f"Uploaded {len(df_recommendations)} rows to {table_id}")
+# Define the BigQuery table reference
+table_ref = client.dataset(dataset_id).table(table_id)
+
+# Upload the DataFrame to BigQuery (create a new table)
+job_config = bigquery.LoadJobConfig(
+    schema=[
+        bigquery.SchemaField("customer_id", "STRING"),
+        bigquery.SchemaField("stock_code", "STRING"),
+        bigquery.SchemaField("score", "FLOAT"),
+        bigquery.SchemaField("rank", "INTEGER")
+
+
+    ],
+    write_disposition="WRITE_EMPTY",  # This ensures no merging, it creates a new table
+)
+
+# Load the DataFrame into BigQuery
+job = client.load_table_from_dataframe(df_recommendations, table_ref, job_config=job_config)
+job.result()  # Wait for the job to complete
+print("Uploaded done")
