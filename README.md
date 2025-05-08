@@ -110,12 +110,15 @@ BigQuery serves as the source of truth for analytics, reporting, and recommendat
 
 
 4. **Recommendation Engine (Python + BigQuery)**
-   - **Popularity‑Based**: Top‑N best‑selling items overall & by segment
    - **Collaborative Filtering** via `implicit` library:
+     This module uses implicit feedback (e.g., purchase quantity) from user-item interactions and trains matrix factorization models like ALS, BPR, and LogisticMF to generate personalized product recommendations. Evaluation is performed using time-based and leave-one-out strategies to assess recommendation quality via precision, recall, hit rate, and MRR.
      - **ALS**: `AlternatingLeastSquares(factors=64, regularization=0.1, iterations=30)`
      - **BPR**: `BayesianPersonalizedRanking(factors=64, learning_rate=0.01, regularization=0.01, iterations=50)`
      - **LogMF**: `LogisticMatrixFactorization(factors=64, regularization=0.01, iterations=50)`
    - **Hybrid** (LightFM):
+     This approach combines collaborative filtering with content-based features using the LightFM model. It learns latent factors from user-item interactions (such as the quantity purchased) and incorporates item descriptions (represented using TF-IDF) and user features (represented using an identity matrix) to improve recommendations. The model is evaluated using K-fold cross-validation, with performance metrics such as Precision@k, Recall@k, and F1 Score. The content-based features (item descriptions) are incorporated via the item_features matrix, while user features are represented using a simple identity matrix for each user.
+
+
      ```python
      from lightfm import LightFM
      model = LightFM(
@@ -172,7 +175,7 @@ BigQuery serves as the source of truth for analytics, reporting, and recommendat
   - Comparision between average order value and frequency
 
 - **Recommendations**  
-  - Personalized product lists per user
+  - Personalized product lists from hybrid filtering per user
 
 ---
 
